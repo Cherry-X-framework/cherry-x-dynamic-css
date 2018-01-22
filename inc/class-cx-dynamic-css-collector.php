@@ -85,8 +85,6 @@ if ( ! class_exists( 'CX_Dynamic_CSS_Collector' ) ) {
 			}
 
 			if ( $this->get_handle() ) {
-				var_dump( $this->get_handle() );
-				var_dump( self::$handler_file  );
 				wp_add_inline_script( $this->get_handle(), self::$handler_file );
 			} else {
 				printf( '<script>%s</script>', self::$handler_file );
