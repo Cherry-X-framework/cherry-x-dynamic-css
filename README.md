@@ -65,24 +65,24 @@ function twentyseventeen_init() {
 If you want dynically add styles from content instead of CSS files with variables - you should store `CX_Dynamic_CSS` into variable. To add dynmic styles you need to call next method:
 ```php
 $dynamic_css->collector->add_style(
-		$css_selector,
-		$css_rules,
-    $media
-	);
+	$css_selector,
+	$css_rules,
+	$media
+);
 ```
 Where:
 * `$css_selector` - String. CSS selector to apply styles for.
 * `$css_rules` - Array. Array of CSS rules, which should be apllied. Example:
    ```php
    array(
-			'color'      => '#f00',
+      'color'      => '#f00',
       'text-align' => get_option( 'my-text-align' )
-	 )
+   )
    ```
 * `$media` - Array. Media query args. Example:
   ```php
    array(
-			'min' => '768px',
+      'min' => '768px',
       'max' => '1199px',
-	 )
+   )
    ```
